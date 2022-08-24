@@ -5,6 +5,7 @@ import com.bridgera.automation.framework.testsetup.EdgeWebDriver;
 import com.bridgera.automation.spectranet.pageobject.HomePage;
 import com.bridgera.automation.spectranet.pageobject.LoginPage;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginPageTestCase extends BaseTest {
@@ -18,8 +19,7 @@ public class LoginPageTestCase extends BaseTest {
         loginPage.typeUsername("siteadmin@spf.com");
         loginPage.typePassword("Spf@u$er");
         homePage = loginPage.submitLogin();
-
-
+        String actualResult = homePage.checkHomePage(driver);
+        Assert.assertEquals(actualResult, "Success");
     }
-
 }
