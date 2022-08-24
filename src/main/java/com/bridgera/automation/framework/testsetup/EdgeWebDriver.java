@@ -14,6 +14,7 @@ public class EdgeWebDriver extends EdgeDriver {
     {
         if (driver == null)
         {
+            System.setProperty("webdriver.edge.driver", System.getProperty("user.dir")+ "\\msedgedriver.exe");
             EdgeOptions edgeOptions = new EdgeOptions();
             edgeOptions.setHeadless(headless);
             driver = new EdgeDriver();
