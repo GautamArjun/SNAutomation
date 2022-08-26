@@ -10,19 +10,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertTrue;
+
 public class LoginPageTestCase extends BaseTest {
 
     public WebDriver driver = EdgeWebDriver.getEdgeWebDriver(false);
     @Test
-    public void checkLoginSuccess(){
+    public void checkLoginSuccess() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage;
         loginPage.typeUsername("siteadmin@spf.com");
         loginPage.typePassword("Spf@u$er");
         homePage = loginPage.submitLogin();
-        System.out.println("Current page Title: " + driver.getTitle());
-        //WebDriverWait wait = new WebDriverWait(driver, java.time.Duration 20);
-        //wait.until(ExpectedConditions.elementToBeClickable(lastElementToLoad));
-        Assert.assertEquals(homePage.checkHomePage(), true);
+        Thread.sleep(5000);
+        assertTrue(homePage.checkHomePage());
     }
 }

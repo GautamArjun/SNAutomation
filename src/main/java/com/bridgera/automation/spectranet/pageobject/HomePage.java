@@ -16,9 +16,7 @@ public class HomePage {
 
     public boolean checkHomePage(){
         // Check that we're on the right page.
-        System.out.println("Page Title : " + driver.getTitle());
         if ("Home".equalsIgnoreCase(driver.getTitle())) {
-            System.out.println("This is the Home Page!");
             return true;
         } else {
             return false;

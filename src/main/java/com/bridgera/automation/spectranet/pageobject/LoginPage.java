@@ -66,7 +66,7 @@ public class LoginPage {
     }
 
     // Conceptually, the login page offers the user the service of being able to "log into"
-    // the application using a user name and password.
+    // the application using a username and password.
     public HomePage loginAs(String username, String password) {
         // The PageObject methods that enter username, password & submit login have already defined and should not be repeated here.
         typeUsername(username);
