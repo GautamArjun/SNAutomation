@@ -1,17 +1,16 @@
 package com.bridgera.automation.spectranet.testcases;
 
+import com.bridgera.automation.framework.Reports.GenerateReport;
 import com.bridgera.automation.framework.testcases.BaseTest;
 import com.bridgera.automation.framework.testsetup.EdgeWebDriver;
 import com.bridgera.automation.spectranet.pageobject.HomePage;
 import com.bridgera.automation.spectranet.pageobject.LoginPage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertTrue;
 
+@Listeners(GenerateReport.class)
 public class LoginPageTestCase extends BaseTest {
 
     public WebDriver driver = EdgeWebDriver.getEdgeWebDriver(false);

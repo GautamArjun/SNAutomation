@@ -13,6 +13,5 @@ public class BaseTest {
     public void Exit() {
         if(driver!=null)
             driver.close();
-        System.out.println("Browser closed");
     }
 }
