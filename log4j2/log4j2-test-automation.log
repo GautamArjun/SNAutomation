@@ -1,0 +1,14 @@
+[INFO ] 2022-09-05 20:34:22.413 [main] Log - Tests are starting!
+[INFO ] 2022-09-05 20:34:40.122 [main] Log - Tests are ending!
+[INFO ] 2022-09-05 20:41:51.689 [main] Log - Tests are starting!
+[INFO ] 2022-09-05 20:42:05.280 [main] Log - Tests are ending!
+[INFO ] 2022-09-05 20:51:57.196 [main] Log - Tests are starting!
+[INFO ] 2022-09-05 20:52:12.180 [main] Log - Tests are ending!
+[INFO ] 2022-09-05 20:59:34.493 [main] Log - Tests are starting!
+[INFO ] 2022-09-05 20:59:49.951 [main] Log - Tests are ending!
+[INFO ] 2022-09-05 21:32:29.274 [main] Log - I am in onStart method User Login
+[INFO ] 2022-09-05 21:32:29.354 [main] Log - Tests are starting!
+[INFO ] 2022-09-05 21:32:29.368 [main] Log - checkLoginSuccess test is starting.
+[INFO ] 2022-09-05 21:32:40.210 [main] Log - checkLoginSuccess test has succeeded.
+[INFO ] 2022-09-05 21:32:40.247 [main] Log - Tests are ending!
+[INFO ] 2022-09-05 21:32:41.169 [main] Log - I am in onFinish method User Login
