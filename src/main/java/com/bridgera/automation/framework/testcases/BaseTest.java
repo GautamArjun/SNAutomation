@@ -1,17 +1,27 @@
 package com.bridgera.automation.framework.testcases;
 
+import com.bridgera.automation.framework.testsetup.EdgeWebDriver;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
+import com.bridgera.automation.framework.utils.logs.*;
 
 public class BaseTest {
+    public WebDriver driver;
 
-    public WebDriver driver = null;
+    public WebDriver getDriver() {
+        return driver;
+    }
 
-    @AfterTest
-    public void Exit() {
-        if(driver!=null)
-            driver.close();
+    @BeforeClass
+    public void classLevelSetup() {
+        Log.info("Tests are starting!");
+        driver = EdgeWebDriver.getEdgeWebDriver(false);
+    }
+
+    @AfterClass
+    public void teardown() {
+        Log.info("Tests are ending!");
+        driver.quit();
     }
 }
